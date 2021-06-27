@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Always starts with dependent bean eg: here dependent bean is Scores 
+		class -->
+	<bean name="scores"
+		class="com.sawan.spring.springcore.reftypes.Scores" p:maths="80"
+		p:physics="90" p:chemistry="74" />
+
+	<!-- 3rd way of doing it -->
+	<bean name="student"
+		class="com.sawan.spring.springcore.reftypes.Student" p:scores-ref="scores">
+		
+		<!-- 
+			// 1st way of doing it
+			<property name="scores" ref="scores"/>
+		
+			// 2nd way of doing it
+			<property name="scores">
+				<ref bean="scores" />
+			</property>
+		 -->
+
+	</bean>
+
+</beans>
