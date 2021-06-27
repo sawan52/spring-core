@@ -1,4 +1,4 @@
-package com.sawan.spring.springcore.propertiesplaceholder.assignment;
+package com.sawan.spring.springcoreadvance.propertiesplaceholder.assignment;
 
 public class WsClient {
 

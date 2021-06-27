@@ -9,10 +9,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:property-placeholder
-		location="com/sawan/spring/springcore/propertiesplaceholder/assignment/wsclient.properties" />
+		location="com/sawan/spring/springcoreadvance/propertiesplaceholder/assignment/wsclient.properties" />
 
 	<bean
-		class="com.sawan.spring.springcore.propertiesplaceholder.assignment.WsClient"
+		class="com.sawan.spring.springcoreadvance.propertiesplaceholder.assignment.WsClient"
 		name="wsClient">
 
 		<constructor-arg value="${url}" />

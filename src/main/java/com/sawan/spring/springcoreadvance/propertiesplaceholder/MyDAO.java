@@ -1,4 +1,4 @@
-package com.sawan.spring.springcore.propertiesplaceholder;
+package com.sawan.spring.springcoreadvance.propertiesplaceholder;
 
 public class MyDAO {
 
