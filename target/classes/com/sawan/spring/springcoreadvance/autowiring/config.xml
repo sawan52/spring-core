@@ -27,6 +27,6 @@
 
 	<bean name="employee"
 		class="com.sawan.spring.springcoreadvance.autowiring.Employee"
-		autowire="byType" />
+		autowire="constructor" />
 
 </beans>
