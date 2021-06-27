@@ -11,8 +11,14 @@
 
 	<bean name="addition"
 		class="com.sawan.spring.springcore.constructorinjection.ambiguity.Addition">
-		<constructor-arg value="10" />
-		<constructor-arg value="20" />
+		<!-- inside constructor arg we didn't specify the type then it will call 
+			the STRING arg constructor so to avoid this default behaviour we can use 
+			type to specify which arg constructor we want to invoke -->
+		<!-- we can use index to specify which constructor arg is for which constructor 
+			arg, if there are multiple args fo same type -->
+		<constructor-arg value="20.35" type="double" index="1" />
+		<constructor-arg value="10" type="int" index="0" />
+
 	</bean>
 
 </beans>
