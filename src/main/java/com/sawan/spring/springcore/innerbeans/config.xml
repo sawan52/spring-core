@@ -9,9 +9,12 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- implemented inner bean; here Address class bean is inner bean of Employee 
-		class bean -->
+		class bean; scope="prototype" means we are allowing to created multiple objects 
+		of that bean; scope="singleton" which is a by default applicable and allow 
+		only one object to be created for that bean -->
 	<bean name="employee"
-		class="com.sawan.spring.springcore.innerbeans.Employee" p:id="123">
+		class="com.sawan.spring.springcore.innerbeans.Employee" p:id="123"
+		scope="prototype">
 		<property name="address">
 			<bean class="com.sawan.spring.springcore.innerbeans.Address"
 				p:hno="631" p:street="Ismailganj" p:city="Lucknow" />
