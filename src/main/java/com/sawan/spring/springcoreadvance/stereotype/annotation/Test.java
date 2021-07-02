@@ -10,10 +10,10 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/sawan/spring/springcoreadvance/stereotype/annotation/config.xml");
 		Instructor instructor = (Instructor) context.getBean("inst");
-		System.out.println(instructor.hashCode());
+		System.out.println(instructor);
 
 		Instructor instructor2 = (Instructor) context.getBean("inst");
-		System.out.println(instructor2.hashCode());
+		System.out.println(instructor2);
 
 	}
 
