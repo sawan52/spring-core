@@ -2,7 +2,7 @@ package com.sawan.spring.springcoreadvance.injecting.interfaces;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("dAO")
 public class OrderDAOImpl implements OrderDAO {
 
 	@Override

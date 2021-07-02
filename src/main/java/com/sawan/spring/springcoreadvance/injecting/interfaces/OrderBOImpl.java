@@ -1,12 +1,14 @@
 package com.sawan.spring.springcoreadvance.injecting.interfaces;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("bO")
 public class OrderBOImpl implements OrderBO {
 
 	@Autowired
+	@Qualifier("dAO2")
 	private OrderDAO dao;
 
 	public OrderDAO getDao() {
