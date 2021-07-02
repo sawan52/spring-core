@@ -16,9 +16,13 @@
 		name="dAO" />
 
 	<bean
+		class="com.sawan.spring.springcoreadvance.injecting.interfaces.OrderDAOImpl2"
+		name="dAO2" />
+
+	<bean
 		class="com.sawan.spring.springcoreadvance.injecting.interfaces.OrderBOImpl"
 		name="bO">
-		<property name="dao" ref="dAO"></property>
+		<property name="dao" ref="dAO2" />
 	</bean>
 
 </beans>

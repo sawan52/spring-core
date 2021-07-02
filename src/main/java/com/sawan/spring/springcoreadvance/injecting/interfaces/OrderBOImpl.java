@@ -1,7 +1,12 @@
 package com.sawan.spring.springcoreadvance.injecting.interfaces;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("bO")
 public class OrderBOImpl implements OrderBO {
 
+	@Autowired
 	private OrderDAO dao;
 
 	public OrderDAO getDao() {
@@ -14,7 +19,7 @@ public class OrderBOImpl implements OrderBO {
 
 	@Override
 	public void placeOrder() {
-		System.out.println("Inside OrderBO --> placeOrder()");
+		System.out.println("Inside OrderBOImpl --> placeOrder()");
 		dao.createOrder();
 	}
 
