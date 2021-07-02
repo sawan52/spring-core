@@ -19,7 +19,10 @@ public class Instructor {
 	@Value("#{T(java.lang.Integer).MIN_VALUE}")
 	private int id = 002;
 
-	@Value("Sawan Singh")
+	// @Value("Sawan Singh")
+	// @Value("#{'Shivam Singh'}")
+	// @Value("#{'Shivam Singh'.toUpperCase()}")
+	@Value("#{new java.lang.String('Pradum Singh')}")
 	private String name = "XYZ_ABC";
 
 	@Value("#{topics}")
