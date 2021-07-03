@@ -1,8 +1,11 @@
 package com.sawan.spring.springjdbc.employee.dao.impl;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.sawan.spring.springjdbc.employee.dao.EmployeeDAO;
+import com.sawan.spring.springjdbc.employee.dao.rowmapper.EmployeeRowMapper;
 import com.sawan.spring.springjdbc.employee.dto.Employee;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -36,6 +39,22 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		String sql = "delete from employee where id=?";
 		int result = jdbcTemplate.update(sql, id);
 		return result;
+	}
+
+	@Override
+	public Employee readOneRecord(int id) {
+		String sql = "select * from employee where id=?";
+		EmployeeRowMapper empRowMapper = new EmployeeRowMapper();
+		Employee emp = jdbcTemplate.queryForObject(sql, empRowMapper, id);
+		return emp;
+	}
+
+	@Override
+	public List<Employee> readAllRecords() {
+		String sql = "select * from employee";
+		EmployeeRowMapper empRowMapper = new EmployeeRowMapper();
+		List<Employee> emp = jdbcTemplate.query(sql, empRowMapper);
+		return emp;
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.sawan.spring.springjdbc.employee.test;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,9 +18,9 @@ public class Test {
 		EmployeeDAO dao = (EmployeeDAO) context.getBean("employeeDao");
 
 		Employee employee = new Employee();
-		employee.setId(2);
-		employee.setFirstName("Rohit");
-		employee.setLastName("Verma");
+		employee.setId(3);
+		employee.setFirstName("Pradum");
+		employee.setLastName("Singh");
 
 		// int result = dao.create(employee);
 		// System.out.println("Number of records inserted are: " + result);
@@ -26,8 +28,17 @@ public class Test {
 		// int result = dao.update(employee);
 		// System.out.println("Number of records updated are: " + result);
 
-		int result = dao.delete(1);
-		System.out.println("Number of records deleted are: " + result);
+		// int result = dao.delete(1);
+		// System.out.println("Number of records deleted are: " + result);
+
+		// Employee emp = dao.read(2);
+		// System.out.println("Employee record: " + emp);
+
+		List<Employee> emp = dao.readAllRecords();
+		System.out.println("Employee records:");
+		for (Employee e : emp) {
+			System.out.println(e.getId() + " - " + e.getFirstName() + " " + e.getLastName());
+		}
 
 	}
 
