@@ -17,11 +17,17 @@ public class Test {
 
 		Employee employee = new Employee();
 		employee.setId(2);
-		employee.setFirstName("Pradum");
-		employee.setLastName("Singh");
+		employee.setFirstName("Rohit");
+		employee.setLastName("Verma");
 
-		int result = dao.create(employee);
-		System.out.println("Number of records inserted are: " + result);
+		// int result = dao.create(employee);
+		// System.out.println("Number of records inserted are: " + result);
+
+		// int result = dao.update(employee);
+		// System.out.println("Number of records updated are: " + result);
+
+		int result = dao.delete(1);
+		System.out.println("Number of records deleted are: " + result);
 
 	}
 
