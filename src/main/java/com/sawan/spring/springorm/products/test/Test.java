@@ -28,6 +28,7 @@ public class Test {
 		 */
 
 		// Products products = dao.getOneRecord(2);
+		
 		List<Products> products = dao.getAllRecords();
 		for(Products p : products) {
 			System.out.println(p);
