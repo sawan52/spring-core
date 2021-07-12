@@ -1,5 +1,6 @@
 package com.sawan.spring.springmvcorm.users.services.impl;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,9 @@ public class UsersServiceImpl implements UsersService {
 
 	@Override
 	public List<Users> allUsers() {
-		return dao.getAllUsers();
+		List<Users> allUsers = dao.getAllUsers();
+		Collections.sort(allUsers);
+		return allUsers;
 	}
 
 }

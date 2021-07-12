@@ -6,18 +6,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-public class Users {
+public class Users implements Comparable<Users> {
 
 	@Id
-	private int id;
+	private Integer id;
 	private String name;
 	private String email;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -40,6 +40,11 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}
+
+	@Override
+	public int compareTo(Users user) {
+		return this.id.compareTo(user.id);
 	}
 
 }

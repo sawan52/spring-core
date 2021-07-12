@@ -10,12 +10,21 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<table border="1">
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>email</th>
+		</tr>
 
-	<c:forEach items="${users}" var="user">
-		${user.id}
-		${user.name}
-		${user.email}
-	</c:forEach>
+		<c:forEach items="${users}" var="user">
+			<tr>
+				<td>${user.id}</td>
+				<td>${user.name}</td>
+				<td>${user.email}</td>
+			</tr>
+		</c:forEach>
 
+	</table>
 </body>
 </html>
