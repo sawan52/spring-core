@@ -1,5 +1,7 @@
 package com.sawan.spring.springmvcorm.users.dao.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -25,6 +27,11 @@ public class UsersDaoImpl implements UsersDao {
 	public int create(Users users) {
 		Integer result = (Integer) hibernateTemplate.save(users);
 		return result;
+	}
+
+	@Override
+	public List<Users> getAllUsers() {
+		return hibernateTemplate.loadAll(Users.class);
 	}
 
 }
