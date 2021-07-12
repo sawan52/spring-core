@@ -19,7 +19,7 @@
 		name="viewResolver">
 
 		<property name="prefix">
-			<value>/WEB_INF/views</value>
+			<value>/WEB-INF/views/</value>
 		</property>
 
 		<property name="suffix">
