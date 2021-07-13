@@ -13,4 +13,10 @@
 
 	<aop:aspectj-autoproxy />
 
+	<bean name="productService"
+		class="com.sawan.spring.springaop.ProductServiceImpl" />
+
+	<bean name="logginAspect"
+		class="com.sawan.spring.springaop.aspects.LogginAspect" />
+
 </beans>

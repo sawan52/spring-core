@@ -10,12 +10,12 @@ public class LogginAspect {
 
 	@Before("execution(* com.sawan.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logBefore(JoinPoint joinPoint) {
-		System.out.println("Before executing method!");
+		System.out.println("Before calling the method!");
 	}
 
 	@After("execution(* com.sawan.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logAfter(JoinPoint joinPoint) {
-		System.out.println("After executing method!");
+		System.out.println("After the method invocation!");
 	}
 
 }
