@@ -39,4 +39,9 @@ public class UsersServiceImpl implements UsersService {
 		return allUsers;
 	}
 
+	@Override
+	public Users getUser(Integer id) {
+		return dao.findUsers(id);
+	}
+
 }
